@@ -7,11 +7,11 @@ import net.restassured.demo.Constants;
 import net.restassured.demo.engine.TestContext;
 import net.restassured.demo.reusable.Components;
 import net.restassured.demo.reusable.Resource;
-import net.restassured.demo.Implementations.RequestSpecificationType;
+import net.restassured.demo.request.Implementations.RequestType;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRequest implements RequestSpecificationType {
+public class GetRequest implements RequestType {
 
     @Override
     public void httpMethodRequestSpecificationImplementation(TestContext testContext) {

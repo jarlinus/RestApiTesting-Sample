@@ -3,11 +3,11 @@ package net.restassured.demo.request.factory;
 import net.restassured.demo.requests.AddRequest;
 import net.restassured.demo.requests.DeleteRequest;
 import net.restassured.demo.requests.GetRequest;
-import net.restassured.demo.Implementations.RequestSpecificationType;
+import net.restassured.demo.request.Implementations.RequestType;
 
-public class RequestSpecificationFactory {
+public class RequestFactory {
 
-    public RequestSpecificationType chooseRequestSpecification(String ability){
+    public RequestType chooseRequestSpecification(String ability){
         if(ability.equalsIgnoreCase("adds")){
             return new AddRequest();
         }

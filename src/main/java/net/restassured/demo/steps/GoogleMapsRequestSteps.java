@@ -1,14 +1,14 @@
 package net.restassured.demo.steps;
 
 import io.cucumber.java.en.When;
-import net.restassured.demo.Implementations.RequestSpecificationType;
 import net.restassured.demo.engine.TestContext;
-import net.restassured.demo.request.factory.RequestSpecificationFactory;
+import net.restassured.demo.request.Implementations.RequestType;
+import net.restassured.demo.request.factory.RequestFactory;
 
 public class GoogleMapsRequestSteps {
 
     TestContext testContext;
-    RequestSpecificationType requestSpecificationType;
+    RequestType requestType;
 
     public GoogleMapsRequestSteps(TestContext testContext) {
         this.testContext = testContext;
@@ -21,10 +21,10 @@ public class GoogleMapsRequestSteps {
     }
 
     private void prepareRequestSpecification(TestContext testContext) {
-        requestSpecificationType.httpMethodRequestSpecificationImplementation(testContext);
+        requestType.httpMethodRequestSpecificationImplementation(testContext);
     }
 
     public void setRequestSpecificationAbility(String abilityType) {
-        requestSpecificationType = new RequestSpecificationFactory().chooseRequestSpecification(abilityType);
+        requestType = new RequestFactory().chooseRequestSpecification(abilityType);
     }
 }
